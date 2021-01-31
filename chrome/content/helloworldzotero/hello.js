@@ -1,4 +1,5 @@
 Zotero.HelloWorldZotero = {
+
 	DB: null,
 	
 	init: function () {
@@ -17,6 +18,7 @@ Zotero.HelloWorldZotero = {
 		window.addEventListener('unload', function(e) {
 				Zotero.Notifier.unregisterObserver(notifierID);
 		}, false);
+		alert('poggers');
 	},
 	
 	insertHello: function() {
@@ -51,7 +53,7 @@ Zotero.HelloWorldZotero = {
 				
 				// Loop through array of items and grab titles
 				var titles = [];
-				for each(var item in items) {
+				for (var item in items) {
 					// For deleted items, get title from passed data
 					if (event == 'delete') {
 						titles.push(item.old.title ? item.old.title : '[No title]');
